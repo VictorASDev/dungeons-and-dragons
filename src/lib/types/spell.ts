@@ -31,7 +31,11 @@ export interface spell {
     name?: string;
     url?: string;
   }[];
-  subclasses?: any[];
+  subclasses?: {
+    index?: string;
+    name?: string;
+    url?: string;
+  }[];
   url?: string;
   updated_at?: string;
 }

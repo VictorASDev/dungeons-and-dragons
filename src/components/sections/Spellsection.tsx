@@ -4,13 +4,10 @@ import SpellCard from "../cards/SpellCard";
 import { spell } from "@/lib/types/spell";
 
 import { useEffect, useState } from "react";
-import { getSpellByName } from "@/lib/api/dnd/spellsByID";
-import { get } from "http";
 
 const SpellSection = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [allSpells, setAllSpells] = useState<spell[]>([]);
-    const [searchResults, setSearchResults] = useState<spell[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {

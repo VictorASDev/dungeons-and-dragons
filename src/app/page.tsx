@@ -7,7 +7,7 @@ export default function Home() {
     <div className="flex flex-col items-center bg-gray-100 min-w-screen min-h-screen">
         <Navbar />
         <Header />
-        <MagicsSection />
+        <MagicsSection id="spells" />
     </div>
   );
 }

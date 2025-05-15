@@ -1,6 +1,7 @@
 'use cliente';
 
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
     return (
@@ -19,13 +20,16 @@ const Navbar = () => {
             <ul className="flex space-x-4 gap-2.5">
             <li>
             {/*TODO: corrigir os scales*/}
-            <a href="/" className="text-white hover:text-red-900 hover:scale-110 transition-transform duration-300">Home</a>
+            <Link href="#" className="text-white hover:text-red-900 hover:scale-110 transition-transform duration-300">Home</Link>
             </li>
             <li>
-            <a href="/about" className="text-white hover:text-red-900 hover:scale-110 transition-transform duration-300">About</a>
+            <Link href="#spells" className="text-white hover:text-red-900 hover:scale-110 transition-transform duration-300 scroll-smooth">Spells</Link>
             </li>
             <li>
-            <a href="/contact" className="text-white hover:text-red-900 transform hover:scale-110 transition-transform duration-300">Contact</a>
+            <Link href="#" className="text-white hover:text-red-900 hover:scale-110 transition-transform duration-300">About</Link>
+            </li>
+            <li>
+            <Link href="#" className="text-white hover:text-red-900 hover:scale-110 transition-transform duration-300">Contact</Link>
             </li>
             </ul>
         </div>

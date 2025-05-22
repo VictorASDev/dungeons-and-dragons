@@ -17,8 +17,8 @@ const AboutSection = () => {
           <h2 className="text-base w-screen font-extrabold mt-2 text-white z-20 text-center md:w-3/4 md:p-1.5 md:text-xl md:text-right">
              The World of Dungeons & Dragons
           </h2>
-          <p className="text-xs w-screen pr-3 pl-3 text-white z-20 text-justify md:w-3/4 md:text-base">
-            Explore fantastic lands, uncover ancient secrets, and battle mythical creatures in Dungeons & Dragons — the legendary role-playing game where imagination leads the way. Create your own hero, master powerful spells, and journey through realms filled with danger and wonder. Whether you're delving into shadowy dungeons or soaring through enchanted skies, every choice you make shapes the story. In D&D, the adventure is yours to command — and the world is waiting.
+          <p className="text-xs w-screen pr-3 pl-3 text-white z-20 text-justify md:w-3/4  md:text-justify md:text-base">
+            Explore fantastic lands, uncover ancient secrets, and battle mythical creatures in Dungeons & Dragons — the legendary role-playing game where imagination leads the way. Create your own hero, master powerful spells, and journey through realms filled with danger and wonder. Whether you´re delving into shadowy dungeons or soaring through enchanted skies, every choice you make shapes the story. In D&D, the adventure is yours to command — and the world is waiting.
           </p>
         </div>
       </div>

@@ -23,6 +23,7 @@ export interface spell {
   };
   school?: {
     index?: string;
+    desc?: string;
     name?: string;
     url?: string;
   };

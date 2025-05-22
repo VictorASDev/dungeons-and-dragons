@@ -28,6 +28,10 @@ const SpellSection = () => {
     return (
         <div className="flex flex-col gap-4 items-center bg-white w-full py-8" id="spells">
 
+            <h2 className="relative text-3xl md:text-6xl font-bold text-center mb-4 text-red-900 ">
+                Spells
+            </h2>
+            
             <input 
                 type="text"
                 placeholder="Search for a spell..."
@@ -36,7 +40,7 @@ const SpellSection = () => {
                 value={searchTerm}
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-6xl px-4">
-                {filteredSpells.map(spell => (
+                {filteredSpells.slice(0,30).map(spell => (
                     <SpellCard key={spell.index} spell={spell} />
                 ))}
             </div>

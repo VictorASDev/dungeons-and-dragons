@@ -6,7 +6,7 @@ import Link from "next/link";
 const Navbar = () => {
     return (
         <nav className="p-5 bg-transparent fixed w-full z-50">
-        <div className="container mx-auto flex justify-between items-center p-0 pb-1">
+        <div className="container mx-auto flex justify-between items-center pb-1">
             {/* TODO: Add D20 Logo */}
             <div className="text-white text-lg font-bold">
                 <Image
@@ -17,7 +17,7 @@ const Navbar = () => {
                     className="h-10 w-10 rotate-12 hover:scale-110 transition-transform duration-300" 
                 />
             </div>
-            <ul className="flex space-x-4 gap-2.5">
+            <ul className="flex space-x-4 gap-2.5 p-4">
             <li>
             {/*TODO: corrigir os scales*/}
             <Link href="#" className="text-white text-xs md:text-xl hover:text-red-900 hover:scale-110 transition-transform duration-300">Home</Link>

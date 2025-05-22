@@ -3,7 +3,6 @@
 import Header from "@/components/header/Header";
 import Navbar from "@/components/navigation/Navbar";
 import { getSpellByID } from "@/lib/api/dnd/spellsByID";
-import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
@@ -13,7 +12,6 @@ const DetailPage = () => {
     console.log(id);
 
     useEffect(() => {
-        
         const fetchData = async () => {
             if (id) {
                 const data = await getSpellByID(id);

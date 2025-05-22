@@ -35,7 +35,7 @@ const SpellSection = () => {
             <input 
                 type="text"
                 placeholder="Search for a spell..."
-                className="p-2 mb-4 border border-gray-300 rounded"
+                className="p-2 mb-4 border border-gray-300 rounded text-red-900"
                 onChange={(e) => setSearchTerm(e.target.value)}
                 value={searchTerm}
             />

@@ -14,8 +14,8 @@ export default function Home() {
             title="Dungeons & Dragons"
             description="Create heroes, build campaigns, and dive into epic adventures across magical realms and forgotten dungeons."
         />
-        <AboutSection />
-        <SpellSection />
+         <AboutSection />
+        <SpellSection /> 
     </div>
   );
 }

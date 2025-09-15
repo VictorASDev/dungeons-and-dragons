@@ -5,13 +5,17 @@ import Image from "next/image";
 const SpellCard = ({ spell }: { spell: spell }) => {
     return (
         <Link href={`/spell-detail?id=${spell.index}`} className="w-full">
-            <div className="bg-amber-50 text-black p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer border-8 ornament relative h-20" key={spell.index}>
-                <h3 className="text-xl font-bold absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">{spell.name}</h3>
-                <p className="text-sm">{spell.desc?.join(" ")}</p>
-                <p className="text-sm absolute bottom-0 right-10">Level: {spell.level}</p>
+            <div className="relative flex justify-center items-center text-white shadow-md transition-shadow duration-300 cursor-pointer h-45 overflow-hidden group" key={spell.index}>
+                <Image 
+                    src={`/magical-circle.png`} 
+                    alt="magical circle"
+                    width={100}
+                    height={100}
+                    className="absolute inset-0 m-auto w-35 h-35 opacity-20 pointer-events-none transition duration-300 ease-in animate-spin-slow object-cover group-hover:opacity-50 group-hover:brightness-200"
+                />
+                <h3 className="text-2xl z-10 lowercase transition duration-300 ease-in group-hover:brightness-200">{spell.name}</h3>
             </div>
         </Link>
-       
     );
 }
 export default SpellCard;

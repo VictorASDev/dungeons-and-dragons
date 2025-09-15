@@ -7,12 +7,15 @@ interface HeaderProps {
     imageUrl: string;
     title: string;
     description: string;
+    isMainPage?: boolean;
 }
 
 const Header = (props: HeaderProps) => {
     const headerRef = useRef<HTMLElement>(null);
     const [inView, setInView] = useState(false);
+    const [isMainPage, setIsMainPage] = useState(false);
 
+    {/*Todo: Consertar isso aqui*/}
     useEffect(() => {
         const observer = new window.IntersectionObserver(
             ([entry]) => setInView(entry.isIntersecting),
@@ -32,7 +35,7 @@ const Header = (props: HeaderProps) => {
                 className="object-cover z-0"
             />
             
-            <div className="relative flex flex-col w-full h-full bg-black/70 z-10 px-4 py-10 md:px-12 md:py-20 gap-4 md:gap-20 justify-around items-start-safe">
+            <div className="relative flex flex-col w-full h-full bg-black/60 z-10 px-4 py-10 md:px-12 md:py-20 gap-4 md:gap-20 justify-around items-start-safe">
                 <h1 className = "text-6xl sm:text-8xl md:text-[200px] font-extrabold z-2 mt-5 text-center uppercase">
                     {props.title}
                 </h1>
@@ -40,7 +43,7 @@ const Header = (props: HeaderProps) => {
                 {/* <p className="text-xl sm:text-2xl z-2 max-w-xl text-left mt-10 ml-18 animate-bottom-to-top">
                     {props.description}
                 </p> */}
-
+            {props.isMainPage &&
                     <Image
                     src="/rpg-dragon.png"
                     alt="Red RPG Dragon"
@@ -49,6 +52,7 @@ const Header = (props: HeaderProps) => {
                     //Pre carrega a imagem para melhorar a performance
                     priority
                     />
+            }
 
             </div>
         </header>

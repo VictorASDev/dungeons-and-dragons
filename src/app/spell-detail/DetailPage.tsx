@@ -28,11 +28,12 @@ const DetailPage = () => {
     return (
         <div className="flex flex-col items-center bg-black w-screen">
             <Navbar />
-            {/* Trocar essa imagem feia horrivel*/}
+            {/* Todo: Trocar essa imagem feia horrivel*/}
             <Header
                 imageUrl="/headers/casting-spell.jpg"
                 title="Dungeons & Dragons"
-                description="Create heroes, build campaigns, and dive into epic adventures across magical realms and forgotten dungeons." />
+                description="Create heroes, build campaigns, and dive into epic adventures across magical realms and forgotten dungeons." 
+                />
         </div>
     );
 }

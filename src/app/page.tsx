@@ -10,11 +10,12 @@ export default function Home() {
     <div className="flex flex-col items-center bg-black w-screen">
         <Navbar />
         <Header 
-            imageUrl="/headers/rpg-dragon.jpeg"
+            imageUrl="/background.png"
             title="Dungeons & Dragons"
             description="Create heroes, build campaigns, and dive into epic adventures across magical realms and forgotten dungeons."
+            isMainPage={true}
         />
-         <AboutSection />
+        <AboutSection />
         <SpellSection /> 
     </div>
   );

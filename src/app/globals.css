@@ -4,7 +4,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f1faee;
   --foreground: #171717;
 }
 
@@ -52,4 +52,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .animate-bottom-to-top {
   animation: fade-in-bottom-top 1s ease-out forwards;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
 }

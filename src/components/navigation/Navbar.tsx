@@ -12,7 +12,7 @@ const Navbar = () => {
                     <Link href="#" className="text-white text-xs md:text-xl transition-transform duration-300 hover:text-red-900 hover:scale-110">home</Link>
                     </li>
                     <li>
-                    <Link href="#spells" className="text-white text-xs md:text-xl hover:text-red-900 hover:scale-110 transition-transform duration-300 scroll-smooth">spells</Link>
+                    <Link href="#spells" className="text-white text-xs transition-transform duration-300 md:text-xl hover:text-red-900 hover:scale-110">spells</Link>
                     </li>
                     <li>
                     <Link href="#" className="text-white text-xs md:text-xl hover:text-red-900 hover:scale-110 transition-transform duration-300">about</Link>

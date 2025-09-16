@@ -15,14 +15,12 @@ const schools = [
 ];
 
 const SwiperSchools = () => {
-    const [hovered, setHovered] = useState<string | null>(null);
-
     return (
         <div className="w-full overflow-hidden flex justify-center items-center">
             <Swiper
                 slidesPerView={4}
                 spaceBetween={30}
-                speed={3000}
+                speed={800}
                 loop={true}
                 autoplay={{ 
                     delay: 0, 
@@ -37,8 +35,6 @@ const SwiperSchools = () => {
                     <SwiperSlide
                         key={school.name}
                         className="flex flex-col items-center justify-center"
-                        onMouseEnter={() => setHovered(school.name)}
-                        onMouseLeave={() => setHovered(null)}
                     >
                         <Image 
                             src={school.src} 
@@ -47,11 +43,7 @@ const SwiperSchools = () => {
                             width={150}
                             height={150}
                         />
-                        {hovered === school.name && (
-                            <span className="mt-2 px-3 py-1 bg-black/80 text-white rounded text-lg transition-all duration-200">
-                                {school.name}
-                            </span>
-                        )}
+            
                     </SwiperSlide>
                 ))}
             </Swiper>

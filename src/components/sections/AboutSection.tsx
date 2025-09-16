@@ -20,7 +20,7 @@ const AboutSection = () => {
         scrollTrigger: {
           trigger: ".section",
           start: "top 80%",
-          end: "bottom 10%",
+          end: "bottom 40%",
           toggleActions: "play reverse play reverse",
         }
       }
@@ -37,7 +37,7 @@ const AboutSection = () => {
       scrollTrigger: {
         trigger: ".section",
         start: "top 80%",
-        end: "bottom 10%",
+        end: "bottom 40%",
         toggleActions: "play reverse play reverse",
       }
     })
@@ -45,7 +45,7 @@ const AboutSection = () => {
     
 
   return (
-    <div className="section flex flex-col items-center justify-between bg-red-900 w-screen py-8">
+    <div className="section flex flex-col items-center justify-between bg-red-900 w-screen py-8 mt-0 ">
       <div className="flex flex-col md:flex-row justify-around items-center w-full ">
         <Image 
           src="/types-of-magic.jpg"

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import SelectionButton from "../buttons/SelectionButton";
 import SearchInput from "../inputs/SearchInput";
 import SwiperSchools from "./SwiperSchools";
+import HorizontalSlider from "./HorizontalSlider";
 
 const SpellSection = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -38,14 +39,15 @@ const SpellSection = () => {
         setSearchFilteredSpells(levelFilteredSpells.filter(spell =>
             spell.name?.toLowerCase().includes(searchTerm.toLowerCase())
         ));
-    }, [selectedLevel, searchTerm, allSpells]);
+    }, [selectedLevel, searchTerm]);
 
   
 
     return (
-        <div className="flex flex-col gap-8 items-center w-full py-8 mt-10" id="spells">
-            <SwiperSchools />
-
+        <div className="flex flex-col gap-8 items-center w-ful" id="spells">
+            
+            <HorizontalSlider />
+            
             <h2 className="relative text-4xl md:text-8xl font-bold text-center mb-4 text-white uppercase ">
                 Spells
             </h2>

@@ -47,7 +47,7 @@ const Header = (props: HeaderProps) => {
     
     return (
         <header
-        className="header relative flex items-center justify-center w-full h-[100vh] text-white overflow-hidden">
+        className="header relative flex items-center justify-center w-full h-screen text-white overflow-hidden">
             <Image
                 src={props.imageUrl}
                 alt={props.title}

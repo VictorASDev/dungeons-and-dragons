@@ -5,7 +5,6 @@ import { spell } from "@/lib/types/spell";
 import { useEffect, useState } from "react";
 import SelectionButton from "../buttons/SelectionButton";
 import SearchInput from "../inputs/SearchInput";
-import SwiperSchools from "./SwiperSchools";
 import HorizontalSlider from "./HorizontalSlider";
 
 const SpellSection = () => {

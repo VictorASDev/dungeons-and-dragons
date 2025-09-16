@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const SpellCard = ({ spell }: { spell: spell }) => {
     return (
-        <Link href={`/spell-detail?id=${spell.index}`} className="w-full">
+        <Link href={`/spell-detail?id=${spell.index}`} >
             <div className="relative flex justify-center items-center text-white shadow-md transition-shadow duration-300 cursor-pointer h-45 overflow-hidden group" key={spell.index}>
                 <Image 
                     src={`/magical-circle.png`} 

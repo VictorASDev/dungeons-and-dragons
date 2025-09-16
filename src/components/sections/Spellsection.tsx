@@ -2,10 +2,12 @@
 import { getSpellList } from "@/lib/api/dnd/spells";
 import SpellCard from "../cards/SpellCard";
 import { spell } from "@/lib/types/spell";
-
 import { useEffect, useState } from "react";
 import SelectionButton from "../buttons/SelectionButton";
 import SearchInput from "../inputs/SearchInput";
+import Swiper from "swiper";
+import SwipperSchools from "./SwiperSchools";
+import SwiperSchools from "./SwiperSchools";
 
 const SpellSection = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -44,6 +46,7 @@ const SpellSection = () => {
 
     return (
         <div className="flex flex-col gap-8 items-center w-full py-8 mt-10" id="spells">
+            <SwiperSchools />
 
             <h2 className="relative text-4xl md:text-8xl font-bold text-center mb-4 text-white uppercase ">
                 Spells

@@ -1,5 +1,3 @@
-import { propagateServerField } from "next/dist/server/lib/render-server";
-
 interface SearchInputProps {
     type?: string;
     placeholder?: string;

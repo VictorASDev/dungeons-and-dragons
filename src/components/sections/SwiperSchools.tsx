@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
+import Image from 'next/image';
 
 const schools = [
     { src: '/schools/abjuration.jpg', name: 'Abjuration' },
@@ -14,6 +15,8 @@ const schools = [
 ];
 
 const SwiperSchools = () => {
+    const [hovered, setHovered] = useState<string | null>(null);
+
     return (
         <div className="w-full overflow-hidden flex justify-center items-center">
             <Swiper
@@ -34,8 +37,21 @@ const SwiperSchools = () => {
                     <SwiperSlide
                         key={school.name}
                         className="flex flex-col items-center justify-center"
+                        onMouseEnter={() => setHovered(school.name)}
+                        onMouseLeave={() => setHovered(null)}
                     >
-                        <img src={school.src} alt={school.name} className='w-40' />
+                        <Image 
+                            src={school.src} 
+                            alt={school.name} 
+                            className='w-40'
+                            width={150}
+                            height={150}
+                        />
+                        {hovered === school.name && (
+                            <span className="mt-2 px-3 py-1 bg-black/80 text-white rounded text-lg transition-all duration-200">
+                                {school.name}
+                            </span>
+                        )}
                     </SwiperSlide>
                 ))}
             </Swiper>

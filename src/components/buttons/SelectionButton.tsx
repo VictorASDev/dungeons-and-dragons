@@ -1,7 +1,5 @@
-import { useState } from "react";
-
 interface selectionButtonProps {
-    item: any;
+    item: string | number | undefined;
     isActive?: boolean;
     onClick?: () => void;
 }

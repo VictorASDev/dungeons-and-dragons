@@ -5,8 +5,6 @@ import { spell } from "@/lib/types/spell";
 import { useEffect, useState } from "react";
 import SelectionButton from "../buttons/SelectionButton";
 import SearchInput from "../inputs/SearchInput";
-import Swiper from "swiper";
-import SwipperSchools from "./SwiperSchools";
 import SwiperSchools from "./SwiperSchools";
 
 const SpellSection = () => {
@@ -19,7 +17,7 @@ const SpellSection = () => {
 
     const allLevels = Array.from(new Set(allSpells.map(spell => spell.level))).sort((a, b) => (a ?? 0) - (b ?? 0));
 
-    const [selectedLevel, setSelectedLevel] = useState<any>(null);
+    const [selectedLevel, setSelectedLevel] = useState<number | string | null | undefined>(null);
 
     const [searchFilteredSpells, setSearchFilteredSpells] = useState<spell[]>(filteredSpells);
 
@@ -40,7 +38,7 @@ const SpellSection = () => {
         setSearchFilteredSpells(levelFilteredSpells.filter(spell =>
             spell.name?.toLowerCase().includes(searchTerm.toLowerCase())
         ));
-    }, [selectedLevel, searchTerm]);
+    }, [selectedLevel, searchTerm, allSpells]);
 
   
 

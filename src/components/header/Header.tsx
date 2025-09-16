@@ -13,9 +13,6 @@ interface HeaderProps {
 }
 
 const Header = (props: HeaderProps) => {
-    const [inView, setInView] = useState(false);
-    const [isMainPage, setIsMainPage] = useState(false);
-
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 

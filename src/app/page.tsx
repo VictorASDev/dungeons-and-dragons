@@ -28,9 +28,17 @@ export default function Home() {
             img="/types-of-magic.jpg"
             title="The World of Dungeons & Dragons"
             description="Discover the schools of magic that define the world of Dungeons & Dragons. From fiery evocations and deceptive illusions to divine blessings and dark necromancy, each school unlocks a different way to shape reality. Explore the secrets of conjuration, the foresight of divination, the power of enchantment, and more. The path of magic is as limitless as your imagination."
+            isImageInLeft = { true }
         />
         <SpellSection /> 
 
+        <AboutSection 
+          img="/types-of-magic.jpg"
+          title="The World of Dungeons & Dragons"
+          description="Discover the schools of magic that define the world of Dungeons & Dragons. From fiery evocations and deceptive illusions to divine blessings and dark necromancy, each school unlocks a different way to shape reality. Explore the secrets of conjuration, the foresight of divination, the power of enchantment, and more. The path of magic is as limitless as your imagination."
+          isImageInLeft = { false }
+        />
+        
         <RacesSection />
     </div>
   );

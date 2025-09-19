@@ -25,7 +25,6 @@ const SpellSection = () => {
         const fetchData = async () => {
             const data = await getSpellList();
             setAllSpells(data);
-            console.log(data);
         };
         fetchData();
     }, []);
@@ -47,7 +46,7 @@ const SpellSection = () => {
             
             <HorizontalSlider />
             
-            <h2 className="relative text-4xl md:text-8xl font-bold text-center mb-4 text-white uppercase ">
+            <h2 className="text-4xl md:text-8xl font-bold text-center mb-4 text-white uppercase">
                 Spells
             </h2>
             

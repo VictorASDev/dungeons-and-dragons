@@ -39,11 +39,10 @@ const RacesSection = ({ onLoaded }: { onLoaded?: () => void }) => {
       });
     }, containerRef);
 
-    ScrollTrigger.refresh(); // garante atualização ao carregar os cards
+    ScrollTrigger.refresh(); 
     return () => ctx.revert();
   }, [allRaces]);
 
-  // notifica o componente pai (como seu AboutSection) quando terminar
   useEffect(() => {
     if (!loading && onLoaded) {
       setTimeout(() => onLoaded(), 200);

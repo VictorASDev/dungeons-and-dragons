@@ -5,14 +5,16 @@ import RaceCard from "../cards/RaceCard";
 import { getRaces } from "@/lib/api/dnd/getRaces";
 import { race } from "@/lib/types/race";
 
-const RacesSection = () => {
+const RacesSection = ({ onLoaded }: { onLoaded?: () => void }) => {
   const [allRaces, setAllRaces] = useState<race[]>([]);
+  const [loading, setLoading] = useState(true);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     (async () => {
       const data = await getRaces();
       setAllRaces(data);
+      setLoading(false);
     })();
   }, []);
 
@@ -29,25 +31,42 @@ const RacesSection = () => {
           ease: "power3.out",
           scrollTrigger: {
             trigger: card,
-            start: "top 85%",      // quando o topo do card chega a 85% da viewport
+            start: "top 85%",
             toggleActions: "play none none reverse",
-            //markers: true
-          }
+          },
         });
       });
     }, containerRef);
 
+    ScrollTrigger.refresh(); // garante atualização ao carregar os cards
     return () => ctx.revert();
   }, [allRaces]);
 
+  // notifica o componente pai (como seu AboutSection) quando terminar
+  useEffect(() => {
+    if (!loading && onLoaded) {
+      setTimeout(() => onLoaded(), 200);
+    }
+  }, [loading, onLoaded]);
+
   return (
-    <div className="flex flex-col justify-center items-center text-white">
+    <div className="flex flex-col justify-center items-center text-white mb-10" id="races">
+      <h2 className="text-4xl md:text-8xl font-bold text-center my-10 text-white uppercase">
+        Races
+      </h2>
 
-        <h2 className="text-4xl md:text-8xl font-bold text-center my-10 text-white uppercase">Races</h2>
-
-        <div ref={containerRef} className="w-full grid grid-cols-3 p-10 justify-center items-center gap-20 container">
-            {allRaces.map(r => <RaceCard key={r.index} title={r.name} className="card mx-8" />)}
-        </div>
+      <div
+        ref={containerRef}
+        className="w-full grid grid-cols-3 p-10 justify-center items-center gap-20 container"
+      >
+        {loading ? (
+          <p className="text-center text-gray-400">Loading races...</p>
+        ) : (
+          allRaces.map((r) => (
+            <RaceCard key={r.index} title={r.name} className="card mx-8" />
+          ))
+        )}
+      </div>
     </div>
   );
 };

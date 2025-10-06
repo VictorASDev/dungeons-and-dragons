@@ -10,6 +10,7 @@ interface AboutSectionProps {
   title: string;
   description: string;
   isImageInLeft: boolean;
+  id?: string;
 }
 
 const AboutSection = (props: AboutSectionProps) => {
@@ -21,7 +22,7 @@ const AboutSection = (props: AboutSectionProps) => {
     gsap.registerPlugin(ScrollTrigger);
 
     if (imageRef.current && sectionRef.current) {
-      const searchSection = document.querySelector(".search-section");
+      
       gsap.fromTo(
         imageRef.current,
         { x: props.isImageInLeft ? -200 : 200, opacity: 0 },
@@ -34,7 +35,6 @@ const AboutSection = (props: AboutSectionProps) => {
             start: "top 80%",
             end: "bottom 40%",
             toggleActions: "play reverse play reverse",
-            markers: true
           }
         }
       );
@@ -64,6 +64,7 @@ const AboutSection = (props: AboutSectionProps) => {
 
   return (
     <div
+      id={props.id}
       ref={sectionRef}
       className="section flex flex-col items-center justify-between bg-red-900 w-screen py-8 mt-0"
     >

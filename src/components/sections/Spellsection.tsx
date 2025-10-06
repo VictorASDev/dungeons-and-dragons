@@ -5,7 +5,6 @@ import { spell } from "@/lib/types/spell";
 import { useEffect, useState } from "react";
 import SelectionButton from "../buttons/SelectionButton";
 import SearchInput from "../inputs/SearchInput";
-import HorizontalSlider from "./HorizontalSlider";
 
 const SpellSection = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -42,16 +41,14 @@ const SpellSection = () => {
   
 
     return (
-        <div className="flex flex-col gap-8 items-center w-ful" id="spells">
-            
-            <HorizontalSlider />
-            
+        <div className="flex flex-col gap-8 items-center w-full py-10" id="spells">
+                        
             <h2 className="text-4xl md:text-8xl font-bold text-center mb-4 text-white uppercase">
                 Spells
             </h2>
             
-            <div className="relative w-1/2 py-3 flex flex-wrap justify-center items-center mb-4 gap-3">
-                <div className="absolute z-0 w-full h-0.5 rounded-2xl bg-red-900"/>
+            <div className="relative w-full py-3 flex flex-wrap justify-center items-center mb-4 gap-3">
+                <div className="absolute z-0 w-1/2 h-0.5 rounded-2xl bg-red-900"/>
                 {allLevels.map(level => (
                     <SelectionButton 
                         key={level}

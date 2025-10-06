@@ -31,7 +31,7 @@ const HorizontalSlider = () => {
                 pinSpacing: true,
                 start: "top top",
                 end: () => `+=${window.innerHeight * slides.length * 0.7}`, 
-                scrub: 1,                
+                scrub: 1,      
             }
         });
     }, []);

@@ -1,23 +1,49 @@
 'use cliente';
 
-import Link from "next/link";
-
+import {Link as ScrollLink} from 'react-scroll'
 const Navbar = () => {
     return (
-        <div className="p-0.5 mt-7 fixed z-50 mx-auto flex justify-center items-center border border-white rounded-full shadow-lg w-fit max-w-3xl bg-white/10">
+        <div className="p-0.5 px-3 mt-7 fixed z-50 mx-auto flex justify-center items-center border border-white rounded-full shadow-lg w-fit max-w-3xl bg-white/10">
                 <ul className="flex space-x-4 gap-2.5 p-4">
                     <li>
-                    {/*TODO: corrigir os scales*/}
-                    <Link href="#" className="text-white text-xs md:text-xl transition-transform duration-300 hover:text-red-900 hover:scale-110">home</Link>
+                        <ScrollLink 
+                            to="spells" 
+                            smooth="easeInOutQuad" 
+                            duration={2000}
+                            className="text-white text-xs md:text-xl transition-transform duration-300 hover:text-red-900 hover:scale-110 cursor-pointer"
+                        >
+                            Spells
+                        </ScrollLink>
                     </li>
                     <li>
-                    <Link href="#spells" className="text-white text-xs transition-transform duration-300 md:text-xl hover:text-red-900 hover:scale-110">spells</Link>
+                        <ScrollLink 
+                            to="races" 
+                            smooth="easeInOutQuad" 
+                            duration={2000}
+                            className="text-white text-xs md:text-xl transition-transform duration-300 hover:text-red-900 hover:scale-110 cursor-pointer"
+                        >
+                            Races
+                        </ScrollLink>
                     </li>
                     <li>
-                    <Link href="#" className="text-white text-xs md:text-xl hover:text-red-900 hover:scale-110 transition-transform duration-300">about</Link>
+                        <ScrollLink 
+                            to="about" 
+                            smooth="easeInOutQuad" 
+                            duration={2000}
+                            className="text-white text-xs md:text-xl transition-transform duration-300 hover:text-red-900 hover:scale-110 cursor-pointer"
+                        >
+                            About
+                        </ScrollLink>
                     </li>
                     <li>
-                    <Link href="#" className="text-white text-xs md:text-xl hover:text-red-900 hover:scale-110 transition-transform duration-300">contact</Link>
+                        <ScrollLink 
+                            to="contact" 
+                            smooth="easeInOutQuad" 
+                            duration={2000}
+                            className="text-white text-xs md:text-xl transition-transform duration-300 hover:text-red-900 hover:scale-110 cursor-pointer"
+                        >
+                            Contact
+                        </ScrollLink>
                     </li>
                 </ul>
         </div>

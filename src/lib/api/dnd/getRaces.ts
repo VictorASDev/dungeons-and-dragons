@@ -1,7 +1,11 @@
 import axios from "axios";
 
 export async function getRaces() {
-    const res = await axios.get('https://www.dnd5eapi.co/api/races');
-    console.log(res.data.results);
+  try {
+    const res = await axios.get("https://www.dnd5eapi.co/api/races");
     return res.data.results;
+  } catch (error) {
+    console.error("Erro ao buscar raças:", error);
+    return [];
+  }
 }

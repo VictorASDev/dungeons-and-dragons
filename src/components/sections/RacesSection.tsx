@@ -23,14 +23,15 @@ const RacesSection = ({ onLoaded }: { onLoaded?: () => void }) => {
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
-      gsap.utils.toArray(".card").forEach((card: any) => {
-        gsap.from(card, {
+      gsap.utils.toArray(".card").forEach((card) => {
+        const element = card as HTMLElement; 
+        gsap.from(element, {
           y: 120,
           opacity: 0,
           duration: 0.7,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: card,
+            trigger: element,
             start: "top 85%",
             toggleActions: "play none none reverse",
           },

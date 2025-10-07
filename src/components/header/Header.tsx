@@ -52,6 +52,7 @@ const Header = (props: HeaderProps) => {
                 src={props.imageUrl}
                 alt={props.title}
                 fill
+                priority
                 className="object-cover z-0"
             />
             
@@ -69,7 +70,6 @@ const Header = (props: HeaderProps) => {
                     alt="Red RPG Dragon"
                     fill
                     className="object-cover z-3 dragon"
-                    //Pre carrega a imagem para melhorar a performance
                     priority
                     />
             }

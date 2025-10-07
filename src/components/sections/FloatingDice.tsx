@@ -16,6 +16,7 @@ const FloatingDice = () => {
   const d8Ref = useRef<HTMLImageElement | null>(null);
   const d6Ref = useRef<HTMLImageElement | null>(null);
   const d4Ref = useRef<HTMLImageElement | null>(null);
+  const title = useRef<HTMLHeadingElement | null>(null);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -23,18 +24,21 @@ const FloatingDice = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "top 80%",
-        end: "bottom 40%",
+        start: "top top",
+        pinSpacing: true,
+        end: "bottom 30%",
+        pin: true,
         scrub: true,
       },
     });
 
-    tl.from(d20Ref.current, { x: -200, opacity: 0, duration: 1})
+    tl.from(d20Ref.current, { x: 200, opacity: 0, duration: 1 })
       .from(d12Ref.current, { x: 200, opacity: 0, duration: 1 }, "<") 
       .from(d10Ref.current, { x: 200, opacity: 0, duration: 1 }, "<")
-      .from(d8Ref.current,  { x: 200, opacity: 0, duration: 1 }, "<")
+      .from(d8Ref.current,  { x: -200, opacity: 0, duration: 1 }, "<")
       .from(d6Ref.current, { x: -200, opacity: 0, duration: 1 }, "<")
-      .from(d4Ref.current, { x: -200, opacity: 0, duration: 1 }, "<");
+      .from(d4Ref.current, { x: -200, opacity: 0, duration: 1 }, "<")
+      .to(title.current, {scale: 0, duration: 1, opacity: 0 , ease: "power1.in"}, "<");
     gsap.to(
       [d20Ref.current, d12Ref.current, d10Ref.current, d8Ref.current, d6Ref.current, d4Ref.current],
       {
@@ -51,16 +55,16 @@ const FloatingDice = () => {
 
 
   return (
-    <div className="relative w-screen h-[500px] overflow-hidden bg-red-900 flex justify-center items-center"
+    <div className="relative w-screen h-screen overflow-hidden bg-red-900 flex justify-center items-center gap-10"
     ref={sectionRef}>
       {/* D4 */}
       <Image
         src="/dice/d4.png"
         alt="d4 dice"
-        width={100}
-        height={100}
+        width={150}
+        height={150}
         unoptimized
-        className="absolute animate-float-slow top-[10%] left-[20%]"
+        className="animate-float-fast z-2"
         ref={d4Ref}
       />
 
@@ -68,10 +72,10 @@ const FloatingDice = () => {
       <Image
         src="/dice/d6.png"
         alt="d6 dice"
-        width={100}
-        height={100}
+        width={150}
+        height={150}
         unoptimized
-        className="absolute animate-float-medium top-[50%] left-[10%]"
+        className="animate-float-fast z-2"
         ref={d6Ref}
       />
 
@@ -79,10 +83,10 @@ const FloatingDice = () => {
       <Image
         src="/dice/d8.png"
         alt="d8 dice"
-        width={100}
-        height={100}
+        width={150}
+        height={150}
         unoptimized
-        className="absolute animate-float-fast top-[50%] right-[10%]"
+        className="animate-float-fast z-2"
         ref={d8Ref}
       />
 
@@ -90,10 +94,10 @@ const FloatingDice = () => {
       <Image
         src="/dice/d10.png"
         alt="d10 dice"
-        width={100}
-        height={100}
+        width={150}
+        height={150}
         unoptimized
-        className="absolute animate-float-medium bottom-[10%] right-[20%]"
+        className="animate-float-fast z-2"
         ref={d10Ref}
       />
 
@@ -101,10 +105,10 @@ const FloatingDice = () => {
       <Image
         src="/dice/d12.png"
         alt="d12 dice"
-        width={100}
-        height={100}
+        width={170}
+        height={170}
         unoptimized
-        className="absolute animate-float-slow top-[10%] right-[20%]"
+        className="animate-float-fast z-2"
         ref={d12Ref}
       />
 
@@ -112,14 +116,21 @@ const FloatingDice = () => {
       <Image
         src="/dice/d20.png"
         alt="d20 dice"
-        width={100}
-        height={100}
+        width={170}
+        height={170}
         unoptimized
-        className="absolute animate-float-fast bottom-[10%] left-[20%]"
+        className="animate-float-fast z-2"
         ref={d20Ref}
       />
 
-      <h2 className="text-4xl uppercase text-white">Discover the magic, races and adventures</h2>
+      <div className="absolute top-1/2 left-0 w-full flex justify-center -translate-y-1/2 pointer-events-none z-1">
+        <h2
+          className="text-7xl uppercase text-white text-center w-2/3"
+          ref={title}
+        >
+          Discover the magic, races and adventures
+        </h2>
+      </div>
     </div>
   );
 }

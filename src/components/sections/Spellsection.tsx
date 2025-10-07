@@ -1,4 +1,5 @@
 'use client';
+
 import { getSpellList } from "@/lib/api/dnd/spells";
 import SpellCard from "../cards/SpellCard";
 import { spell } from "@/lib/types/spell";

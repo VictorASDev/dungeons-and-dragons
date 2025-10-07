@@ -5,8 +5,6 @@ import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-{/*TODO: Refatorar essa seção pra melhorar o design*/}
-
 const FloatingDice = () => {
 
   const sectionRef = useRef<HTMLDivElement | null>(null);

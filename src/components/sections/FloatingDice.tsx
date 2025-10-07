@@ -26,7 +26,6 @@ const FloatingDice = () => {
         start: "top 80%",
         end: "bottom 40%",
         scrub: true,
-        markers: true
       },
     });
 

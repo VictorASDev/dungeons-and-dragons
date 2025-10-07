@@ -44,7 +44,7 @@ const SpellSection = () => {
     return (
         <div className="flex flex-col gap-8 items-center w-full py-10" id="spells">
                         
-            <h2 className="text-4xl md:text-8xl font-bold text-center mb-4 text-white uppercase">
+            <h2 className="text-6xl md:text-8xl font-bold text-center my-10 text-white uppercasee">
                 Spells
             </h2>
             
@@ -67,7 +67,7 @@ const SpellSection = () => {
                 className="w-1/2 px-2 border-2 border-gray-300 rounded-4xl shadow-sm transition-all duration-75 ease-in focus:outline-none focus:ring-2 focus:border-none focus:ring-red-900"
             />
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-15 w-full max-w-6xl px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-15 w-full max-w-6xl px-4">
                 {searchFilteredSpells.map(spell => (
                     <SpellCard key={spell.index} spell={spell}/>
                 ))}

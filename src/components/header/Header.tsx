@@ -8,7 +8,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 interface HeaderProps {
     imageUrl: string;
     title: string;
-    description: string;
     isMainPage?: boolean;
 }
 
@@ -47,7 +46,7 @@ const Header = (props: HeaderProps) => {
     
     return (
         <header
-        className="header relative flex items-center justify-center w-full h-screen text-white overflow-hidden">
+        className="header w-screen h-96 relative flex items-center justify-center text-white overflow-hidden md:h-screen">
             <Image
                 src={props.imageUrl}
                 alt={props.title}
@@ -61,16 +60,14 @@ const Header = (props: HeaderProps) => {
                     {props.title}
                 </h1>
 
-                {/* <p className="text-xl sm:text-2xl z-2 max-w-xl text-left mt-10 ml-18 animate-bottom-to-top">
-                    {props.description}
-                </p> */}
             {props.isMainPage &&
                     <Image
-                    src="/rpg-dragon.png"
-                    alt="Red RPG Dragon"
-                    fill
-                    className="object-cover z-3 dragon"
-                    priority
+                        src="/rpg-dragon.png"
+                        alt="Red RPG Dragon"
+                        fill
+                        unoptimized
+                        className="object-cover md:object-cover z-3 dragon"
+                        priority
                     />
             }
 

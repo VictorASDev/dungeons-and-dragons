@@ -53,7 +53,7 @@ const FloatingDice = () => {
 
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-red-900 flex justify-center items-center gap-10"
+    <div className="relative w-screen h-screen overflow-hidden bg-red-900 flex flex-col justify-center items-center gap-10 md:flex-row"
     ref={sectionRef}>
       {/* D4 */}
       <Image
@@ -62,7 +62,7 @@ const FloatingDice = () => {
         width={150}
         height={150}
         unoptimized
-        className="animate-float-fast z-2"
+        className="w-20 h-20 lg:w-[150px] lg:h-[150px] animate-float-fast z-2"
         ref={d4Ref}
       />
 
@@ -73,7 +73,7 @@ const FloatingDice = () => {
         width={150}
         height={150}
         unoptimized
-        className="animate-float-fast z-2"
+        className="w-20 h-20 lg:w-[150px] lg:h-[150px] animate-float-fast z-2"
         ref={d6Ref}
       />
 
@@ -84,7 +84,7 @@ const FloatingDice = () => {
         width={150}
         height={150}
         unoptimized
-        className="animate-float-fast z-2"
+        className="w-20 h-20 lg:w-[150px] lg:h-[150px] animate-float-fast z-2"
         ref={d8Ref}
       />
 
@@ -95,7 +95,7 @@ const FloatingDice = () => {
         width={150}
         height={150}
         unoptimized
-        className="animate-float-fast z-2"
+        className="w-20 h-20 lg:w-[150px] lg:h-[150px] animate-float-fast z-2"
         ref={d10Ref}
       />
 
@@ -106,7 +106,7 @@ const FloatingDice = () => {
         width={170}
         height={170}
         unoptimized
-        className="animate-float-fast z-2"
+        className="w-20 h-20 lg:w-[170px] lg:h-[170px] animate-float-fast z-2"
         ref={d12Ref}
       />
 
@@ -117,13 +117,13 @@ const FloatingDice = () => {
         width={170}
         height={170}
         unoptimized
-        className="animate-float-fast z-2"
+        className="w-20 h-20 lg:w-[170px] lg:h-[170px] animate-float-fast z-2"
         ref={d20Ref}
       />
 
       <div className="absolute top-1/2 left-0 w-full flex justify-center -translate-y-1/2 pointer-events-none z-1">
         <h2
-          className="text-7xl uppercase text-white text-center w-2/3"
+          className="text-4xl sm:text-6xl md:text-7xl uppercase text-white text-center w-2/3"
           ref={title}
         >
           Discover the magic, races and adventures

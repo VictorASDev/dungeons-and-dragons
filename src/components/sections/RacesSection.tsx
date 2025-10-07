@@ -53,13 +53,13 @@ const RacesSection = ({ onLoaded }: { onLoaded?: () => void }) => {
 
   return (
     <div className="flex flex-col justify-center items-center text-white mb-10" id="races">
-      <h2 className="text-4xl md:text-8xl font-bold text-center my-10 text-white uppercase">
+      <h2 className="text-6xl md:text-8xl font-bold text-center my-10 text-white uppercase">
         Races
       </h2>
 
       <div
         ref={containerRef}
-        className="w-full grid grid-cols-3 p-10 justify-center items-center gap-20 container"
+        className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 justify-center items-center gap-20 container"
       >
         {loading ? (
           <p className="text-center text-gray-400">Loading races...</p>

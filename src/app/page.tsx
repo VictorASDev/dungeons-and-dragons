@@ -17,7 +17,6 @@ export default function Home() {
       <Header 
           imageUrl="/background.png"
           title="Dungeons & Dragons"
-          description="Create heroes, build campaigns, and dive into epic adventures across magical realms and forgotten dungeons."
           isMainPage
       />
 

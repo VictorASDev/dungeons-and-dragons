@@ -56,7 +56,7 @@ const Header = (props: HeaderProps) => {
             />
             
             <div className="relative flex flex-col w-full h-full bg-black/60 z-10 px-4 py-10 md:px-12 md:py-20 gap-4 md:gap-20 justify-around items-start-safe">
-                <h1 className = "title text-6xl sm:text-8xl md:text-[200px] font-extrabold z-2 mt-5 text-center uppercase">
+                <h1 className = "title text-6xl sm:text-8xl md:text-9xl  lg:text-[200px] font-extrabold z-2 mt-5 text-center uppercase">
                     {props.title}
                 </h1>
 

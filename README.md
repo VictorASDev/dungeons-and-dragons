@@ -1,7 +1,7 @@
 # 🧙‍♂️ Dungeons & Dragons — Web Experience
 
 Uma experiência interativa inspirada no universo de *Dungeons & Dragons*, desenvolvida com **Next.js** e **Tailwind CSS**.
-O projeto consome dados da **API oficial de Dungeons & Dragons (D&D 5e API)** para exibir informações sobre raças, magias e muito mais, em um layout imersivo e totalmente responsivo.
+O projeto consome dados da **API oficial de Dungeons & Dragons (D&D 5e API)** para exibir informações sobre raças, magias e muito mais, em um layout imersivo e responsivo.
 
 ---
 

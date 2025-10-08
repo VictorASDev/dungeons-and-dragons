@@ -23,8 +23,7 @@ dungeons-and-dragons-main/
 ├── public/             # Imagens e assets estáticos
 ├── components/         # Componentes reutilizáveis (Header, Footer, Navbar, etc.)
 ├── sections/           # Seções principais (About, Races, Spells, etc.)
-├── styles/             # Estilos globais e configurações do Tailwind
-├── app/ ou pages/      # Rotas e páginas do Next.js
+├── app/                # Rotas e páginas do Next.js
 └── package.json        # Dependências e scripts
 ```
 

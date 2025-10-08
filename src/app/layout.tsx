@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "Dungeons & Dragons",
   description: "A Dungeons & Dragons API project",
   icons: {
-    icon: "/d20-alt-icon.webp",
+    icon: "/d20-icon.webp",
   },
 };
 

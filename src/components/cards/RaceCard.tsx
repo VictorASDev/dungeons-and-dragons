@@ -15,6 +15,7 @@ const RaceCard = (props: RaceCardProps) => {
                     alt={`${props.title}`}
                     width={240}
                     height={112}
+                    unoptimized
                     className="object-cover w-full h-full rounded-t-2xl object-top"
                 />
             </div>

@@ -1,11 +1,11 @@
 'use client';
 
 import { getSpellList } from "@/lib/api/dnd/spells";
-import SpellCard from "../cards/SpellCard";
+import SpellCard from "../../components/cards/SpellCard";
 import { spell } from "@/lib/types/spell";
 import { useEffect, useState } from "react";
-import SelectionButton from "../buttons/SelectionButton";
-import SearchInput from "../inputs/SearchInput";
+import SelectionButton from "../../components/buttons/SelectionButton";
+import SearchInput from "../../components/inputs/SearchInput";
 
 const SpellSection = () => {
     const [searchTerm, setSearchTerm] = useState("");

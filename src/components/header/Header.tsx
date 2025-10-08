@@ -5,6 +5,7 @@ import { useLayoutEffect} from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+
 interface HeaderProps {
     imageUrl: string;
     title: string;

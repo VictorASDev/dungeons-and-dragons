@@ -3,7 +3,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import RaceCard from "../cards/RaceCard";
+import RaceCard from "../../components/cards/RaceCard";
 import { getRaces } from "@/lib/api/dnd/getRaces";
 import { race } from "@/lib/types/race";
 

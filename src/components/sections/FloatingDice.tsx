@@ -126,7 +126,7 @@ const FloatingDice = () => {
           className="text-4xl sm:text-6xl md:text-7xl uppercase text-white text-center w-2/3"
           ref={title}
         >
-          Discover the magic, races and adventures
+          Discover the magic, the races, and the adventures of the Forgotten Realms
         </h2>
       </div>
     </div>

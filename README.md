@@ -99,7 +99,6 @@ Se quiser sugerir melhorias, abrir *issues* ou enviar *pull requests*, fique à 
 
 **Victor Augusto**
 Estudante de Sistemas de Informação (IFBA)
-Desenvolvedor front-end em formação, apaixonado por design e experiências interativas.
 ---
 
 ## 📜 Licença

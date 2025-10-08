@@ -52,7 +52,7 @@ const RacesSection = ({ onLoaded }: { onLoaded?: () => void }) => {
   }, [loading, onLoaded]);
 
   return (
-    <div className="flex flex-col justify-center items-center text-white mb-10" id="races">
+    <div className="flex flex-col justify-center items-center min-h-screen text-white mb-10" id="races">
       <h2 className="text-6xl md:text-8xl font-bold text-center my-10 text-white uppercase">
         Races
       </h2>

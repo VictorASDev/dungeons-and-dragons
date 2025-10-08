@@ -42,7 +42,7 @@ const SpellSection = () => {
   
 
     return (
-        <div className="flex flex-col gap-8 items-center w-full py-10" id="spells">
+        <div className="flex flex-col gap-8 items-center w-full py-10 min-h-screen" id="spells">
                         
             <h2 className="text-6xl md:text-8xl font-bold text-center my-10 text-white uppercasee">
                 Spells
